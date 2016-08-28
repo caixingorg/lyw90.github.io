@@ -58,25 +58,22 @@
 
 
 
-<meta name="description" content="node+express项目准备工作
-环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
+<meta name="description" content="node+express 项目准备工作环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
     cnpm install express -g &amp;amp;&amp;amp; cnpm install -g expre-generator    express Ewebpack    cd nodeEpress&amp;amp;&amp;amp;cnpm install
 
 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="手把手 告诉你nodejs + express ">
+<meta property="og:title" content="手把手 告诉你nodejs + express 1">
 <meta property="og:url" content="http://www.ly90.net/2016/08/08/node/index.html">
 <meta property="og:site_name" content="可乐">
-<meta property="og:description" content="node+express项目准备工作
-环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
+<meta property="og:description" content="node+express 项目准备工作环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
     cnpm install express -g &amp;amp;&amp;amp; cnpm install -g expre-generator    express Ewebpack    cd nodeEpress&amp;amp;&amp;amp;cnpm install
 
 1">
-<meta property="og:updated_time" content="2016-08-28T08:30:34.000Z">
+<meta property="og:updated_time" content="2016-08-28T08:37:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="手把手 告诉你nodejs + express ">
-<meta name="twitter:description" content="node+express项目准备工作
-环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
+<meta name="twitter:title" content="手把手 告诉你nodejs + express 1">
+<meta name="twitter:description" content="node+express 项目准备工作环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
     cnpm install express -g &amp;amp;&amp;amp; cnpm install -g expre-generator    express Ewebpack    cd nodeEpress&amp;amp;&amp;amp;cnpm install
 
 1">
@@ -102,7 +99,7 @@
 
   <link rel="canonical" href="http://www.ly90.net/2016/08/08/node/"/>
 
-  <title> 手把手 告诉你nodejs + express  | 可乐 </title>
+  <title> 手把手 告诉你nodejs + express 1 | 可乐 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -232,7 +229,7 @@
             
             
               
-                手把手 告诉你nodejs + express 
+                手把手 告诉你nodejs + express 1
               
             
           </h1>
@@ -272,8 +269,7 @@
       
 
       
-        <h1 id="node-express"><a href="#node-express" class="headerlink" title="node+express"></a>node+express</h1><pre><code>项目准备工作
-环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
+        <h1 id="node-express-项目准备工作"><a href="#node-express-项目准备工作" class="headerlink" title="node+express 项目准备工作"></a>node+express 项目准备工作</h1><pre><code>环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
 </code></pre><p><pre><br>    cnpm install express -g &amp;&amp; cnpm install -g expre-generator<br>    express Ewebpack<br>    cd nodeEpress&amp;&amp;cnpm install<br></pre></p>
 <blockquote>
 <p>1<br>    个人喜好全局安装 express</p>
@@ -286,10 +282,25 @@
 6. package.json
 </code></pre><p>3<br>    进入该项目安装相关依赖</p>
 </blockquote>
-<h2 id="项目自动化构建"><a href="#项目自动化构建" class="headerlink" title="项目自动化构建"></a>项目自动化构建</h2><blockquote>
-<p>1<br>    在同级目录 新建 src  这里主要放开发源码<br>    在src 在里面 images css  js  views(这里主要是放 html)<br>新建文件 gulpfile.js    这个主要负责css构建<br>    <code><br>        var gulp = require(‘gulp’),<br>        gutil = require(‘gulp-util’),<br>        sass = require(‘gulp-sass’),<br>        concat = require(‘gulp-concat’),<br>        uglify = require(‘gulp-uglify’),<br>        cssmin = require(‘gulp-csso’),<br>        sourcemaps = require(‘gulp-sourcemaps’),<br>        md5 = require(‘gulp-md5-plus’),<br>        fileinclude = require(‘gulp-file-include’),<br>        clean = require(‘gulp-clean’),<br>        del = require(‘del’),<br>        gulpif = require(‘gulp-if’),<br>        sprity = require(‘sprity’),<br>        webpack = require(‘webpack’),<br>        webpackConfig = require(‘./webpack.config.js’);</code></p>
-</blockquote>
-<pre><code>gulp.task(&apos;clean&apos;,function (done) {
+<h2 id="项目自动化构建"><a href="#项目自动化构建" class="headerlink" title="项目自动化构建"></a>项目自动化构建</h2><p>在同级目录 新建 src  这里主要放开发源码,在src 在里面 images css  js  views(这里主要是放 html)<br>新建文件 gulpfile.js    这个主要负责css构建</p>
+<p><code></code></p>
+<pre><code>var gulp = require(&apos;gulp&apos;),
+gutil = require(&apos;gulp-util&apos;),
+sass = require(&apos;gulp-sass&apos;),
+concat = require(&apos;gulp-concat&apos;),
+uglify = require(&apos;gulp-uglify&apos;),
+cssmin = require(&apos;gulp-csso&apos;),
+sourcemaps = require(&apos;gulp-sourcemaps&apos;),
+md5 = require(&apos;gulp-md5-plus&apos;),
+fileinclude = require(&apos;gulp-file-include&apos;),
+clean = require(&apos;gulp-clean&apos;),
+del = require(&apos;del&apos;),
+gulpif = require(&apos;gulp-if&apos;),
+sprity = require(&apos;sprity&apos;),
+webpack = require(&apos;webpack&apos;),
+webpackConfig = require(&apos;./webpack.config.js&apos;);
+
+gulp.task(&apos;clean&apos;,function (done) {
     return del([&apos;./public/scripts/**/*&apos;,&apos;./public/styles/**/*&apos;,&apos;./public/images/**/*&apos;])
 
 });
@@ -359,71 +370,68 @@ gulp.task(&apos;md5js&apos;,function (done) {
 
 });
 
-
 //发布
 gulp.task(
   &apos;default&apos;,
   gulp.series(&apos;clean&apos;,&apos;fileinclude&apos;,&apos;sass&apos;,&apos;md5css&apos;,&apos;buildjs&apos;,&apos;md5js&apos;)
 );
+</code></pre><p>     </p>
+<p>新建文件 webpack.config.js    这个主要负责js构建 </p>
+<p><code><br>    var CommonsChunkPlugin = require(“webpack/lib/optimize/CommonsChunkPlugin”);<br>    var path = require(‘path’);<br>    var webpack = require(‘webpack’);<br>    var fs = require(‘fs’);<br>    var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;<br>    var srcDir = path.resolve(process.cwd(), ‘src’);<br>    var publicDir = path.resolve(process.cwd(), ‘public’);SublimeLinter</code></p>
+<pre><code>//获取多页面的每个入口文件，用于配置中的entry
+function getEntry() {
+    var jsPath = path.resolve(srcDir, &apos;scripts&apos;);
+    var dirs = fs.readdirSync(jsPath);
+    var matchs = [], files = {};
+    dirs.forEach(function (item) {
+        matchs = item.match(/(.+)\.js$/);
+        console.log(matchs);
+        if (matchs) {
+            files[matchs[1]] = path.resolve(srcDir, &apos;scripts&apos;, item);
+        }
+    });
+    console.log(&quot;============&quot;);
+    console.log(JSON.stringify(files));
+    return files;
+}
 
-&lt;/code&gt;     
-</code></pre><p>新建文件 webpack.config.js    这个主要负责js构建<br>    <code><br>        var CommonsChunkPlugin = require(“webpack/lib/optimize/CommonsChunkPlugin”);<br>        var path = require(‘path’);<br>        var webpack = require(‘webpack’);<br>        var fs = require(‘fs’);<br>        var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;</code></p>
-<pre><code>    var srcDir = path.resolve(process.cwd(), &apos;src&apos;);
-    var publicDir = path.resolve(process.cwd(), &apos;public&apos;);SublimeLinter
-
-    //获取多页面的每个入口文件，用于配置中的entry
-    function getEntry() {
-        var jsPath = path.resolve(srcDir, &apos;scripts&apos;);
-        var dirs = fs.readdirSync(jsPath);
-        var matchs = [], files = {};
-        dirs.forEach(function (item) {
-            matchs = item.match(/(.+)\.js$/);
-            console.log(matchs);
-            if (matchs) {
-                files[matchs[1]] = path.resolve(srcDir, &apos;scripts&apos;, item);
+module.exports = {
+    cache: true,
+    devtool: &quot;#source-map&quot;,
+    entry: {
+        &apos;index&apos;:path.resolve(srcDir, &apos;scripts/index.js&apos;),
+        &apos;list&apos;: path.resolve(srcDir, &apos;scripts/list.js&apos;),
+        &apos;list-detail&apos;: path.resolve(srcDir, &apos;scripts/list-detail.js&apos;),
+        &apos;error&apos;: path.resolve(srcDir, &apos;scripts/error.js&apos;),
+        &apos;common&apos;:[&quot;jquery&quot;, &quot;lodash&quot;]
+    },
+    output: {
+        path: path.resolve(publicDir, &apos;scripts&apos;),
+        filename: &quot;[name].js&quot;,
+        chunkFilename: &quot;[chunkhash:8].js&quot;,
+    },
+    resolve: {
+        alias: {
+            jquery: &quot;./src/scripts/lib/jquery.js&quot;,
+            lodash: &quot;./src/scripts/lib/lodash.js&quot;,
+        }
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin(
+            &quot;common&quot;,
+            &apos;common.js&apos;
+        ),
+        new uglifyJsPlugin({
+            comcodess: {
+                warnings: false
             }
-        });
-        console.log(&quot;============&quot;);
-        console.log(JSON.stringify(files));
-        return files;
-    }
+        }),
 
-    module.exports = {
-        cache: true,
-        devtool: &quot;#source-map&quot;,
-        entry: {
-            &apos;index&apos;:path.resolve(srcDir, &apos;scripts/index.js&apos;),
-            &apos;list&apos;: path.resolve(srcDir, &apos;scripts/list.js&apos;),
-            &apos;list-detail&apos;: path.resolve(srcDir, &apos;scripts/list-detail.js&apos;),
-            &apos;error&apos;: path.resolve(srcDir, &apos;scripts/error.js&apos;),
-            &apos;common&apos;:[&quot;jquery&quot;, &quot;lodash&quot;]
-        },
-        output: {
-            path: path.resolve(publicDir, &apos;scripts&apos;),
-            filename: &quot;[name].js&quot;,
-            chunkFilename: &quot;[chunkhash:8].js&quot;,
-        },
-        resolve: {
-            alias: {
-                jquery: &quot;./src/scripts/lib/jquery.js&quot;,
-                lodash: &quot;./src/scripts/lib/lodash.js&quot;,
-            }
-        },
-        plugins: [
-            new webpack.optimize.CommonsChunkPlugin(
-                &quot;common&quot;,
-                &apos;common.js&apos;
-            ),
-            new uglifyJsPlugin({
-                comcodess: {
-                    warnings: false
-                }
-            }),
+    ]
+};
+</code></pre><p></p>
+<p>下面就可以进行业务开发了</p>
 
-        ]
-    };
-&lt;/code&gt;
-</code></pre>
       
     </div>
 
@@ -568,7 +576,7 @@ gulp.task(
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#node-express"><span class="nav-number">1.</span> <span class="nav-text">node+express</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目自动化构建"><span class="nav-number">1.1.</span> <span class="nav-text">项目自动化构建</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#node-express-项目准备工作"><span class="nav-number">1.</span> <span class="nav-text">node+express 项目准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目自动化构建"><span class="nav-number">1.1.</span> <span class="nav-text">项目自动化构建</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
