@@ -70,7 +70,7 @@
     cnpm install express -g &amp;amp;&amp;amp; cnpm install -g expre-generator    express Ewebpack    cd nodeEpress&amp;amp;&amp;amp;cnpm install
 
 1">
-<meta property="og:updated_time" content="2016-08-28T08:37:38.000Z">
+<meta property="og:updated_time" content="2016-08-28T08:43:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手 告诉你nodejs + express 1">
 <meta name="twitter:description" content="node+express 项目准备工作环境准备(node环境这里肯定的准备，然后其他的依赖这里使用某宝 镜像 cnpm 安装)
@@ -377,8 +377,16 @@ gulp.task(
 );
 </code></pre><p>     </p>
 <p>新建文件 webpack.config.js    这个主要负责js构建 </p>
-<p><code><br>    var CommonsChunkPlugin = require(“webpack/lib/optimize/CommonsChunkPlugin”);<br>    var path = require(‘path’);<br>    var webpack = require(‘webpack’);<br>    var fs = require(‘fs’);<br>    var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;<br>    var srcDir = path.resolve(process.cwd(), ‘src’);<br>    var publicDir = path.resolve(process.cwd(), ‘public’);SublimeLinter</code></p>
-<pre><code>//获取多页面的每个入口文件，用于配置中的entry
+<p><code></code></p>
+<pre><code>var CommonsChunkPlugin = require(&quot;webpack/lib/optimize/CommonsChunkPlugin&quot;);
+var path = require(&apos;path&apos;);
+var webpack = require(&apos;webpack&apos;);
+var fs = require(&apos;fs&apos;);
+var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+var srcDir = path.resolve(process.cwd(), &apos;src&apos;);
+var publicDir = path.resolve(process.cwd(), &apos;public&apos;);SublimeLinter
+
+//获取多页面的每个入口文件，用于配置中的entry
 function getEntry() {
     var jsPath = path.resolve(srcDir, &apos;scripts&apos;);
     var dirs = fs.readdirSync(jsPath);
